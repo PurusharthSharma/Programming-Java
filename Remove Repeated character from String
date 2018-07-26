@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class removerepeatedchar {
+	public static void main(String args[]){
+		
+		Scanner sys=new Scanner(System.in);
+		
+		System.out.print("Enter The Sting : ");
+		String s1=sys.nextLine();
+		
+		char ch;
+		String s2="";		
+		
+		int length=s1.length();
+		
+		for(int i=0;i<length;i++){
+			ch=s1.charAt(i);
+			if(ch!=' ')
+				s2=s2+ch;
+			s1=s1.replace(ch,' ');			
+			
+		}
+		
+		System.out.println("Updated String is : "+s2);		
+				
+	}
+}
