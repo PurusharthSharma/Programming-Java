@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class bina {
+
+public class binaary {
 	
 	public static void main(String args[]){
 		int num,i,qu,re,binary;
