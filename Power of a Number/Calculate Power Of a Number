@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class power {
+	public static void main(String arga[]){
+		int x,n,val=1,i;
+		double ans;
+		Scanner cmp=new Scanner(System.in);
+		
+		System.out.print("Enter The Number : ");
+		x=cmp.nextInt();
+		
+		System.out.print("Enter The Power of The Number  : ");
+		n=cmp.nextInt();
+		
+	//  POWER  will  only  ITERATE  to  its  HALF  VALUE.....
+		
+		for(i=0;i<n/2;i++){
+			val=x*val;
+		}
+		
+	//  CHECKING  for  the  CONDITION  that  POWER  is  EVEN  or  ODD.....
+		System.out.println(" ");
+		if(n%2==0){
+			System.out.println( x +"^"+ n +" = "+(val*val));
+		}
+		else  //  If  the  Power  is  EVEN.....
+		{
+			System.out.println( x +"^"+ n +" = " +(val*val*x));
+		}
+		
+		
+		
+		
+	}
+
+}
+
