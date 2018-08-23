@@ -1,0 +1,240 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+class bframe extends Frame {
+	bframe(){
+	
+		
+//		SETTING  UP  THE  FONT  SIZE  OF  DIFFERENT  FIELDS
+		
+		
+	//		HEADING  FONT.......
+		Font fh = new Font("Arial",Font.ITALIC,28);
+		
+	//		LABEL  FONT......
+		Font fl = new Font("Arial",Font.BOLD,17);
+		
+	//		CHECKBOX  FONT......
+		Font fcb = new Font("Arial",Font.BOLD,12);
+
+	//		TEXTFIELD  FONT......
+		Font ftf = new Font("Serif",Font.BOLD,14);
+		
+	//		BUTTONS  FONT......
+		Font btf = new Font("Serif",Font.BOLD,16);
+		
+		
+		
+//		CREATING  THE  CHECKBOX  GROUP
+		
+
+		CheckboxGroup ccb = new CheckboxGroup();
+		CheckboxGroup gcb = new CheckboxGroup();
+		CheckboxGroup ncb = new CheckboxGroup();
+		
+		
+		
+		
+//		DECLARING  ALL  LABELS  AND  TEXTFIELD  OF  THE  FORM	
+		
+		
+	
+	//		HEADING......
+		Label head = new Label("  REGISTRATION    FORM  ");
+		head.setFont(fh);
+		
+    
+	//		STUDENT'S  NAME......
+		Label na = new Label("Name");
+		TextField na1 = new TextField();
+		na.setFont(fl);
+		na1.setFont(ftf);		
+	
+	//		GMAIL  ID  of Student......
+		Label gm = new Label("gmail");
+		TextField ga1 = new TextField();
+		gm.setFont(fl);
+		ga1.setFont(ftf);	
+	
+	//		DOB......
+		Label dob = new Label("  DOB  ");		
+		TextField dob1 = new TextField();
+		dob.setFont(fl);
+		dob1.setFont(ftf);
+	
+	//		FATHER'S  NAME......
+		Label fna = new Label ("Father's Name");
+		TextField fna1 = new TextField();
+		fna.setFont(fl);
+		fna1.setFont(ftf);		
+	
+	//		ADDRESS......
+		Label ad = new Label("Address");
+		TextField ad1 = new TextField();
+		TextField ad2 = new TextField();
+		ad.setFont(fl);
+		ad1.setFont(ftf);		
+		ad2.setFont(ftf);	
+	
+	//		PIN  CODE......
+		Label pc = new Label("Pin Code");		
+		TextField pc1 = new TextField();
+		pc.setFont(fl);
+		pc1.setFont(ftf);
+	
+	//		CATEGORY.....
+		Label cat = new Label("Category");				cat.setFont(fl);		
+		Checkbox ge = new Checkbox(" General ",false,ccb);		ge.setFont(fcb);
+		Checkbox ob = new Checkbox("  OBC  ",false,ccb);			ob.setFont(fcb);
+		Checkbox sct = new Checkbox(" SC/ST ",false,ccb);			sct.setFont(fcb);
+		Checkbox cot = new Checkbox(" Others ",false,ccb); 		cot.setFont(fcb);
+	
+	//		GENDER......
+		Label gen = new Label(" Gender ");				gen.setFont(fl);		
+		Checkbox ml = new Checkbox(" Male ",false,gcb);			ml.setFont(fcb);
+		Checkbox fml = new Checkbox(" Female",false,gcb);			fml.setFont(fcb);
+		Checkbox got = new Checkbox(" Others",false,gcb);			got.setFont(fcb);
+	
+	//		NATIONALITY......
+		Label nat = new Label(" Nationality ");			nat.setFont(fl);	
+		Checkbox in = new Checkbox(" Indian ",false,ncb);			in.setFont(fcb);
+		Checkbox not = new Checkbox(" Others ",false,ncb);		not.setFont(fcb);
+	
+	//		12 %.......
+		Label twp = new Label(" 12 % ");
+		TextField twp1 = new TextField();
+		twp.setFont(fl);		
+		twp1.setFont(ftf);
+	
+	//		10 %......
+		Label tep = new Label(" 10 % ");		
+		TextField tep1 = new TextField();
+		tep.setFont(fl);
+		tep1.setFont(ftf);
+	
+	//		UPTU  EXAM  DETAIL......
+		Label up = new Label("UPTU Rank(If Appear in exam)");		
+		TextField up1 = new TextField();
+		up.setFont(fl);
+		up1.setFont(ftf);
+	
+	//		ANY  OTHER  EXAM  DETAILS......
+		Label aoe = new Label("Any Other Exam Details");		
+		TextField aoe1 = new TextField();
+		aoe.setFont(fl);
+		aoe1.setFont(ftf);
+		
+		
+//		DECLARATION  OF  BUTTONS
+	
+	
+	//		BUTTONS......
+		Button b1 = new Button("  Submit  ");
+		b1.setFont(btf);
+		
+		Button b2 = new Button("  < Back  ");
+		b2.setFont(btf);
+		
+		Button b3 = new Button("  Cancel  ");
+		b3.setFont(btf);	
+		
+		
+	
+	
+	//		SETTING   THE   COORDINALTES  OF  ALL  THE  FIELDS .........
+	
+	head.setBounds(200,50,350,50);		//	HEADING
+	
+	na.setBounds(40,150,80,25);			//	NAME
+	na1.setBounds(165,150,480,25);	
+	
+	gm.setBounds(40,180,80,25);			// GMAIL ID				
+	ga1.setBounds(165,180,480,25);
+	
+	dob.setBounds(30,210,80,25);		// DOB
+	dob1.setBounds(165,210,180,25);
+	
+	fna.setBounds(40,240,120,25);		// FATHER'S NAME
+	fna1.setBounds(165,240,480,25);
+	
+	ad.setBounds(40,270,80,25);			// ADDRESS
+	ad1.setBounds(165,270,480,25);
+	ad2.setBounds(165,295,480,25);
+	
+	pc.setBounds(40,325,80,25);			// PIN CODE
+	pc1.setBounds(165,325,180,25);
+	
+	cat.setBounds(40,355,80,25);		// CATEGORY
+	ge.setBounds(165,355,80,25);
+	ob.setBounds(245,355,60,25);
+	sct.setBounds(315,355,70,25);
+	cot.setBounds(385,355,80,25);
+	
+	gen.setBounds(35,385,80,25);		// GENDER
+	ml.setBounds(165,385,80,25);
+	fml.setBounds(245,385,60,25);
+	got.setBounds(315,385,80,25);
+	
+	nat.setBounds(35,415,100,25);		// NATIONALITY
+	in.setBounds(165,415,80,25);
+	not.setBounds(245,415,80,25);
+	
+	twp.setBounds(35,445,100,25);		// 12 %
+	twp1.setBounds(165,445,180,25);
+	
+	tep.setBounds(410,445,55,25);		// 10 %
+	tep1.setBounds(465,445,180,25);
+	
+	up.setBounds(40,475,240,25);		// UPTU RANK
+	up1.setBounds(300,475,180,25);
+	
+	aoe.setBounds(40,505,200,25);		// ANY OTHER EXAM
+	aoe1.setBounds(300,505,180,25);
+	
+	b1.setBounds(355,615,80,30);		// SUBMIT
+	b2.setBounds(455,615,80,30);		// BACK
+	b3.setBounds(555,615,80,30);		// CANCEL
+	
+	
+//		ADDING  ALL  THE  FIELDS  TO  THE  FRAME
+	
+	add(head);
+	add(na);			add(na1);
+	add(gm);			add(ga1);
+	add(dob);			add(dob1);	
+	add(fna);			add(fna1);
+	add(ad);			add(ad1);			add(ad2);
+	add(pc);			add(pc1);
+	add(cat);			add(ge);			add(ob);			add(sct);			add(cot);
+	add(gen);			add(ml);			add(fml);			add(got);
+	add(nat);			add(in);			add(not);
+	add(twp);			add(twp1);
+	add(tep);			add(tep1);
+	add(up);			add(up1);
+	add(aoe);			add(aoe1);
+	add(b1);			add(b2);			add(b3);
+	
+	
+//		SETTING  FRAME  SIZE , LAYOUT & VISIBILITY	
+	setSize(700,700);
+	setLayout(null);
+	setVisible(true);
+	
+	
+	addWindowListener(new WindowAdapter() {
+		public void windowClosing(WindowEvent e) {
+		     System.exit(0);
+		}
+	  }
+	);
+	
+	}
+	public static void main(String args[]){
+		bframe ob = new bframe();
+		ob.setBackground(Color.WHITE);		
+	}
+	
+	
+
+}
