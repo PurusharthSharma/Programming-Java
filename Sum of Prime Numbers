@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class soprime {
+	public static void main(String args[]){
+		 int num,i,sum=1,j,flag=0;
+		 Scanner cmp=new Scanner(System.in);
+		 
+		 System.out.print("Enter The Number till You want To Calculate the Sum : ");
+		 num=cmp.nextInt();
+		 
+		 for(i=2;i<num;i++){
+			 flag=0;
+			 for(j=2;j<=i/2;j++){
+				 if(i%j==0){
+					 flag=1;
+					 break;
+				 }
+			 }
+			 if(flag==0){
+				 sum+=i;
+			 }
+		 }
+		 System.out.print("\nThe Sum of Prime Number Upto the Number "+num);
+		 System.out.print("  is : "+sum);
+	}
+
+}
