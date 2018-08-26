@@ -1,0 +1,724 @@
+/*			This	Project  	Is	Done	By		PURUSHARTH SHARMA	.
+ * 
+ * 																
+ * 													
+*/
+
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class miniproject  implements ActionListener {
+	
+	
+	// 		DECLARING	STRINGS		TO	STORE	DATA	OF	TEXTFIELDS
+	
+	String s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,string;
+	
+	JFrame f;			//			NEW 	JFRAME
+	
+	JButton b31,b32,b33,b34;		//			BUTTONS
+	
+		
+	//		TEXTFIELDS
+	
+	JTextField r_t1,eno,name_t2,h_name_t3,dob_t4,mno_t5,eid_t6,adhar_t7,adhar_t8,add_t9,p_t,padd_t10,f_name_t11,m_name_t12;
+	
+	//		CHOICES
+	
+	Choice course, brancH ,sem,gen,count,st,cit,blood;
+	
+	
+	
+	//		CONSTRUCTOR...
+	
+	miniproject(){
+		
+		 f=new JFrame("FORM");				//		NEW		FRAME...
+		 f.setBackground(Color.white);		//		SET		BACKGROUND	COLOR...
+		 
+		 
+		 //			SETTING		FONT	...
+		 
+		 Font fh = new Font("Arial",Font.ITALIC,28);			//	FONT	FOR		HEADING		 
+		 Font btn = new Font("Serif",Font.BOLD,20);				//	FONT	FOR		BUTTONS
+		 Font labels = new Font("Serif",Font.BOLD,16);			//	FONT	FOR		LABELS
+		 Font fields = new Font("Arial",Font.ITALIC,18);		//	FONT	FOR		TEXTFIELDS
+		 Font choice = new Font("Serif",Font.ITALIC,16);
+	
+		 
+		 //		HEADING
+		 JLabel head = new JLabel("EXAM  FORM  ");
+		 head.setFont(fh);
+		 
+		 //		ROLL NO
+		 JLabel roll_no=new JLabel("Roll No : ");				
+		 roll_no.setFont(labels);
+		 r_t1=new JTextField(30);
+		 r_t1.setFont(fields);
+	
+		 //		GO	BUTTON
+		 b31=new JButton("  Go  ");
+		 b31.setFont(btn);			
+		 
+		 
+		 //		COURSE	
+		 JLabel courses =new JLabel("Courses  :");
+		 courses.setFont(labels);		 
+		 course = new Choice();	
+		 course.setFont(choice);
+		
+		 //		BRANCH	
+		 JLabel branch = new JLabel("Branch  :");	
+		 branch.setFont(labels);
+		 brancH = new Choice();	
+		 brancH.setFont(choice);
+	
+		 //		SEMESTER
+		 JLabel semester = new JLabel("Semester  :");	
+		 semester.setFont(labels);
+		 sem = new Choice();	
+		 sem.setFont(choice);
+	
+		 //		ENROLLMENT	NUMBER
+		 JLabel e_no = new JLabel("Enrollment No  :");
+		 e_no.setFont(labels);
+		 eno=new JTextField(30);
+		 eno.setFont(fields);
+	
+		 //		CANDIDATE 	NAME
+		 JLabel name = new JLabel("Candidate Name  :");
+		 name.setFont(labels);
+		 name_t2 = new JTextField(30);
+		 name_t2.setFont(fields);
+	
+		 //		CANDIDDATE	HINDI	NAME
+		 JLabel h_name = new JLabel("Candidate Hindi Name  :");
+		 h_name.setFont(labels);
+		 h_name_t3 = new JTextField(30);
+		 h_name_t3.setFont(fields);
+		
+		 //		DATE	OF	BIRTH
+		 JLabel dob = new JLabel("DOB  :");
+		 dob.setFont(labels);
+		 dob_t4 = new JTextField(30);
+		 dob_t4.setFont(fields);
+		
+		 //		GENDER
+		JLabel gender = new JLabel("Gender  :");
+		gender.setFont(labels);
+		gen = new Choice();	
+		gen.setFont(choice);
+	
+		//		MOBILE	NUMBER
+		JLabel m_no = new JLabel("Mobile No  :");
+		m_no.setFont(labels);
+		mno_t5 = new JTextField(30);
+		mno_t5.setFont(fields);
+		
+		//		EMAIL-ID
+		JLabel e_id = new JLabel("Email id  ");
+		e_id.setFont(labels);
+		eid_t6 = new JTextField(30);
+		eid_t6.setFont(fields);
+			
+		//		ADHAR	UID
+		JLabel adhar_eid = new JLabel("Aadhar UID (12 digits)  :");
+		adhar_eid.setFont(labels);
+		adhar_t7 = new JTextField(30);
+		adhar_t7.setFont(fields);
+			
+		//		ADHAR	EID
+		JLabel adhar_uid = new JLabel("Aadhar Eid (14 digits)  :");
+		adhar_uid.setFont(labels);
+		adhar_t8 = new JTextField(30);
+		adhar_t8.setFont(fields);
+		
+		//		MAILING
+		JLabel mailing1 = new JLabel("Mailing  Address");
+		mailing1.setFont(labels);
+		JLabel mailing2 = new JLabel("*Please fill this address correctly.");
+		mailing2.setFont(labels);
+			
+		//		ADD	SUBJECT
+		JLabel addsub = new JLabel("Add  Subjects ");
+		addsub.setFont(labels);
+		JTextArea addsub_a1 = new JTextArea();
+		addsub_a1.setFont(fields);
+			
+		//		ADD 	CARRY	OVER
+		JLabel addcarry = new JLabel("Add  CarryOver ");
+		addcarry.setFont(labels);
+		JTextArea addcarry_a2 = new JTextArea();
+		addcarry_a2.setFont(fields);
+			
+		//		ADDRESS
+		JLabel address = new JLabel("Address  :");
+		address.setFont(labels);
+		add_t9 = new JTextField(60);
+		add_t9.setFont(fields);
+			
+		//		PIN	CODE
+		JLabel p_code = new JLabel("Pin Code  :");
+		p_code.setFont(labels);
+		p_t = new JTextField(30);
+		p_t.setFont(fields);
+			
+		//		COUNTRY
+		JLabel country = new JLabel("Country  :");
+		country.setFont(labels);
+		count = new Choice();
+		count.setFont(choice);
+			
+		//		STATE
+		JLabel state = new JLabel("State  :");
+		state.setFont(labels);
+		st = new Choice();
+		st.setFont(choice);
+			
+		//		CITY/DISTRICT
+		JLabel city = new JLabel("City/District  :");
+		city.setFont(labels);
+		cit = new Choice();
+		cit.setFont(choice);
+			
+		//		PERMANENET	ADDRESS
+		JLabel p_add = new JLabel("Permanent Address  :");
+		p_add.setFont(labels);
+		padd_t10 = new JTextField(40);
+		padd_t10.setFont(fields);
+			
+		//		FATHER	NAME
+		JLabel f_name = new JLabel("Father Name  :");
+		f_name.setFont(labels);
+		f_name_t11 = new JTextField(20);
+		f_name_t11.setFont(fields);
+			
+		//		MOTHER	NAME
+		JLabel m_name = new JLabel("Mother Name  :");
+		m_name.setFont(labels);
+		m_name_t12 = new JTextField(20);
+		m_name_t12.setFont(fields);
+			
+		//		BLOOD	GROUP
+		JLabel b_group = new JLabel("Blood Group  :");
+		b_group.setFont(labels);
+		blood = new Choice();
+		blood.setFont(choice);
+		
+		//		CLOSE
+		b34=new JButton("  Close  ");
+		b34.setFont(btn);
+		b34.addActionListener(this);
+		
+		//		SUBMIT	EXAM	FORM	BUTTON
+		b32 = new JButton("Submit  Exarm  Form");
+		b32.setFont(btn);
+		b32.addActionListener(this);
+		
+		//		BACK
+		b33 = new JButton("  BACK  ");
+		b33.setFont(btn);
+		b33.addActionListener(this);
+		
+		
+		
+		//		LIST	ITEM	FOR		COURSES...
+		
+		course.addItem("B.Tech");
+		course.addItem("M.Tech");
+		course.addItem("BBA");
+		course.addItem("MBA");
+		course.addItem("BCA");
+		course.addItem("MCA");		
+		course.addItem("B.Pharma");
+		course.addItem("M.Pharma");
+		
+		
+		
+		//		LIST	ITEM	FOR		BRANCH...
+		
+		brancH.addItem("Aeronautical Engg");
+		brancH.addItem("Agricultural Enginering");
+		brancH.addItem("Chemical Engineering");
+		brancH.addItem("Computer Science Engineering");
+		brancH.addItem("Electrical Engineering");
+		brancH.addItem("Electronics Engineering");
+		brancH.addItem("Industrial Engineering");
+		brancH.addItem("Information Technology");
+		brancH.addItem("Mechanical Engineering");		
+		brancH.addItem("Textile Engineering");
+		
+		
+		
+		//		LIST	ITEM	FOR	SEMESTER...
+		
+		sem.addItem("1");
+		sem.addItem("2");
+		sem.addItem("3");
+		sem.addItem("4");
+		sem.addItem("5");
+		sem.addItem("6");
+		sem.addItem("7");
+		sem.addItem("8");		
+		
+		
+		//		LIST	ITEM	FOR	GENDER...
+		
+		gen.addItem("Male");
+		gen.addItem("Female");
+		gen.addItem("Other");		
+		
+		
+		
+		//		LIST	ITEM	FOR	COUNTRIES...
+		
+		count.addItem("Australia");
+		count.addItem("Brazil");
+		count.addItem("France");
+		count.addItem("Germany");
+		count.addItem("India");	
+		count.addItem("Japan");		
+		count.addItem("New Zeland");
+		count.addItem("Russia");
+		count.addItem("South Africa");		
+		count.addItem("United Kingdom");
+		
+		
+		
+		//		LIST	OF	STATES...
+		
+		st.addItem("Uttar Pradesh");
+		st.addItem("Harayana");
+		st.addItem("Rajasthan");
+		st.addItem("Punjab");
+		st.addItem("Himachal Pradesh");
+		
+		
+		
+		//		LIST	OF	CITIES...
+		
+		cit.addItem("Bulandshahr");
+		cit.addItem("Faridabad");
+		cit.addItem("Jaipur");
+		cit.addItem("Dehradun");
+		cit.addItem("Chandigarh");
+		
+		
+		
+		//		LIST	OF	BLOOD	GROUP...
+		
+		blood.addItem("A");
+		blood.addItem("B");
+		blood.addItem("AB+");
+		blood.addItem("AB-");
+		blood.addItem("O");
+		blood.addItem("O-");
+		
+		
+		//		SET 	LAYOUT	NULL..
+		f.setLayout(null);
+		
+		//		SET		SIZE	OF	FRAME...
+		f.setSize(1920,2200);
+		
+		//		SET	VISIBLE...
+		f.setVisible(true);
+		
+		
+		
+		
+		//		SETTING 	COLOR	......
+		
+		
+		b31.setBackground(Color.RED);			//		BUTTON
+		b32.setBackground(Color.RED);			//		BUTTON
+		
+		roll_no.setForeground(Color.RED);		//		LABEL		
+		courses.setForeground(Color.RED);		//		LABEL
+		branch.setForeground(Color.RED);		//		LABEL
+		semester.setForeground(Color.RED);		//		LABEL
+		e_no.setForeground(Color.RED);			//		LABEL	
+		name.setForeground(Color.RED);			//		LABEL
+		h_name.setForeground(Color.RED);		//		LABEL	
+		dob.setForeground(Color.RED);			//		LABEL	
+		gender.setForeground(Color.RED);		//		LABEL	
+		m_no.setForeground(Color.RED);			//		LABEL	
+		e_id.setForeground(Color.RED);			//		LABEL	
+		adhar_eid.setForeground(Color.RED);		//		LABEL		
+		adhar_uid.setForeground(Color.RED);		//		LABEL		
+		addsub.setForeground(Color.RED);		//		LABEL		
+		addcarry.setForeground(Color.RED);		//		LABEL		
+		address.setForeground(Color.RED);		//		LABEL		
+		p_code.setForeground(Color.RED);		//		LABEL			
+		country.setForeground(Color.RED);		//		LABEL		
+		state.setForeground(Color.RED);			//		LABEL			
+		city.setForeground(Color.RED);			//		LABEL		
+		p_add.setForeground(Color.RED);			//		LABEL			
+		f_name.setForeground(Color.RED);		//		LABEL				
+		m_name.setForeground(Color.RED);		//		LABEL				
+		b_group.setForeground(Color.RED);		//		LABEL					
+		mailing1.setBackground(Color.BLUE);		//		LABEL			
+		
+		
+		
+		
+		//		SETTING		BOUNDS	.....
+		
+		
+		//		HEAD
+		head.setBounds(300,17,350,50);								
+		
+		//		ROLL NUMBER
+		roll_no.setBounds(300,80,350,100);					
+		r_t1.setBounds(300,150,350,25);							
+						
+		//		BUTTON
+		b31.setBounds(800,120,100,50);						
+				
+		//		COURSE
+		courses.setBounds(300,190,350,25);						
+		course.setBounds(300,220,350,25);						
+		
+		//		BRANCH
+		branch.setBounds(800,190,100,25);						
+		brancH.setBounds(800,220,350,25);					
+				
+		//		SEMESTER
+		semester.setBounds(1300,190,100,25);						
+		sem.setBounds(1300,220,350,25);					
+		
+		//		ENROLLMENT	NUMBER
+		e_no.setBounds(300,260,200,25);							
+		eno.setBounds(300,290,350,25);							
+		
+		//		NAME
+		name.setBounds(800,260,350,25);					
+		name_t2.setBounds(800,290,350,25);				
+		
+		//		HINDI	NAME
+		h_name.setBounds(1300,260,350,25);				
+		h_name_t3.setBounds(1300,290,350,25);					
+		
+		//		DOB
+		dob.setBounds(300,330,100,25);						
+		dob_t4.setBounds(300,360,350,25);						
+		
+		//		GENDER
+		gender.setBounds(800,330,350,25);						
+		gen.setBounds(800,360,350,25);									
+			
+		//		MOBILE	NUMBER
+		m_no.setBounds(1300,330,350,25);				
+		mno_t5.setBounds(1300,360,350,25);				
+							
+		//		EMAIL-ID
+		e_id.setBounds(300,400,100,25);					
+		eid_t6.setBounds(300,430,350,25);				
+		
+		//		ADHAR EID
+		adhar_eid.setBounds(800,400,350,25);				
+		adhar_t7.setBounds(800,430,350,25);					
+		
+		//		ADHAR 	UID
+		adhar_uid.setBounds(1300,400,350,25);					
+		adhar_t8.setBounds(1300,430,350,25);					
+		
+		//		MAILING
+		mailing1.setBounds(300,470,100,25);							
+		mailing2.setBounds(300,495,350,25);							
+		
+		//		ADD	SUBJECT
+		addsub.setBounds(300,535,100,25);									
+		addsub_a1.setBounds(300,565,550,100);							
+		
+		//		ADD	CARRYOVER
+		addcarry.setBounds(1100,535,200,15);						
+		addcarry_a2.setBounds(1100,565,550,100);								
+		
+		//		ADD	ADDRESS
+		address.setBounds(300,705,100,25);									
+		add_t9.setBounds(300,735,1350,25);
+		
+		//		PIN	CODE
+		p_code.setBounds(300,775,100,25);
+		p_t.setBounds(300,805,550,25);
+		
+		//		COUNTRY
+		country.setBounds(1100,775,100,25);
+		count.setBounds(1100,805,550,25);
+		
+		//		STATE
+		state.setBounds(300,845,100,25);
+		st.setBounds(300,875,550,25);
+		
+		//		CITY
+		city.setBounds(1100,845,100,25);
+		cit.setBounds(1100,875,550,25);
+		
+		//		PERMANENT	ADDRESS
+		p_add.setBounds(300,905,150,25);
+		padd_t10.setBounds(300,935,350,25);
+		
+		//		FATHER	NAME
+		f_name.setBounds(780,905,150,25);
+		f_name_t11.setBounds(780,935,250,25);
+		
+		//		MOTHER	NAME
+		m_name.setBounds(1160,905,150,25);
+		m_name_t12.setBounds(1160,935,250,25);
+		
+		//		BLOOD	GROUP
+		b_group.setBounds(1550,905,100,25);
+		blood.setBounds(1550,935,100,25);
+		
+		//		BUTTON
+		b32.setBounds(800,980,400,45);	
+		
+		//		BUTTON
+		b33.setBounds(1450,980,200,45);
+		b33.setBackground(Color.lightGray);
+		
+		//		BUTTON
+		b34.setBounds(300,980,200,45);
+		b34.setBackground(Color.lightGray);
+		
+		
+		
+		
+		//		ADDING	LABELS , TEXTFIELDS , BUTTONS	TO	FRAME...
+		
+		
+		f.add(head);
+		
+		f.add(roll_no);
+		f.add(r_t1);
+		
+		f.add(b31);
+		
+		f.add(courses);
+		f.add(course);
+		
+		f.add(branch);
+		f.add(brancH);
+		
+		f.add(semester);
+		f.add(sem);
+		
+		f.add(e_no);
+		f.add(eno);
+		
+		f.add(name);
+		f.add(name_t2);
+		
+		f.add(h_name);
+		f.add(h_name_t3);
+		
+		f.add(dob);
+		f.add(dob_t4);
+		
+		f.add(gender);
+		f.add(gen);
+		
+		f.add(m_no);
+		f.add(mno_t5);
+		
+		f.add(e_id);
+		f.add(eid_t6);
+		
+		f.add(adhar_eid);
+		f.add(adhar_t7);
+		
+		f.add(adhar_uid);
+		f.add(adhar_t8);
+		
+		f.add(mailing1);
+		f.add(mailing2);
+		
+		f.add(addsub);
+		f.add(addsub_a1);
+		
+		f.add(addcarry);
+		f.add(addcarry_a2);
+		
+		f.add(address);
+		f.add(add_t9);
+		
+		f.add(p_code);
+		f.add(p_t);
+		
+		f.add(country);
+		f.add(count);
+		
+		f.add(state);
+		f.add(st);
+		
+		f.add(city);
+		f.add(cit);
+		
+		f.add(p_add);
+		f.add(padd_t10);
+		
+		f.add(f_name);
+		f.add(f_name_t11);
+		
+		f.add(m_name);
+		f.add(m_name_t12);
+		
+		f.add(b_group);
+		f.add(blood);
+		
+		f.add(b32);
+		f.add(b33);
+		f.add(b34);
+		
+		
+				
+		
+		
+	}	//		CLOSING		OF		CONSTRUCTOR
+	
+	
+	
+	
+	
+	//		EVENT		HANDLER.....
+	
+		
+	public void actionPerformed(ActionEvent e){
+		
+		
+		//		IF	'SUBMIT EXAM FORM'	 IS 	CLICKED...
+		
+		if(e.getSource()==b32){
+		
+			
+			
+			
+			//	CALL	THE	OBJECT	OF	NEW	FRAME...
+			
+			//mproject ob2=new mproject();	
+			
+			
+			//	GETTING		AND		STORING		DATA	TO	STRING...
+			
+			s1=r_t1.getText();			
+			s2=(String)course.getSelectedItem();			
+			s3=(String)brancH.getSelectedItem();
+			s4=(String)sem.getSelectedItem();
+			s5=eno.getText();
+			s6=name_t2.getText();
+			s7=h_name_t3.getText();
+			s8=dob_t4.getText();
+			s9=(String)gen.getSelectedItem();
+			s10=mno_t5.getText();
+			s11=eid_t6.getText();
+			s12=adhar_t7.getText();
+			s13=adhar_t8.getText();			
+			s16=add_t9.getText();
+			s17=p_t.getText();
+			s18=(String)count.getSelectedItem();
+			s19=(String)st.getSelectedItem();
+			s20=(String)cit.getSelectedItem();
+			s21=(String)blood.getSelectedItem();
+			s21=padd_t10.getText();
+			s22=f_name_t11.getText();
+			s23=m_name_t12.getText();
+			
+			
+			if(s1.length()==0 || s5.length()==0 || s6.length()==0 || s7.length()==0 || s8.length()==0 || s10.length()==0 || s11.length()==0 || s12.length()==0 || s16.length()==0 || s17.length()==0 || s21.length()==0 || s22.length()==0 || s23.length()==0){
+				JOptionPane.showInputDialog(  this, "Please Fill The Form First...!!!");
+				return;
+			}
+			
+			if(s1.length()!=0){
+				mproject ob2=new mproject();
+			}
+			
+			
+			
+			
+			//		SETTING	TEXT	OF	ALL	FIELDS	TO	NULL...
+			
+			
+			r_t1.setText(" ");
+			course.select(0);
+			brancH.select(0);
+			sem.select(0);
+			eno.setText(" ");
+			name_t2.setText(" ");
+			h_name_t3.setText("");
+			dob_t4.setText("");			
+			gen.select(0);
+			mno_t5.setText("");
+			eid_t6.setText("");
+			adhar_t7.setText("");
+			adhar_t8.setText("");
+			add_t9.setText("");
+			p_t.setText("");
+			count.select(0);
+			st.select(0);
+			cit.select(0);
+			blood.select(0);
+			padd_t10.setText("");
+			f_name_t11.setText("");
+			m_name_t12.setText("");
+			
+			
+			
+			
+			
+			
+		
+			
+			
+		}
+		
+		
+		if(e.getSource()==b33){
+			r_t1.setText(s1);
+			course.select(s2);
+			brancH.select(s3);
+			sem.select(s4);
+			eno.setText(s5);
+			name_t2.setText(s6);
+			h_name_t3.setText(s7);
+			dob_t4.setText(s8);
+			gen.select(s9);
+			mno_t5.setText(s10);
+			eid_t6.setText(s11);
+			adhar_t7.setText(s12);
+			adhar_t8.setText(s13);
+			add_t9.setText(s16);
+			p_t.setText(s17);
+			count.select(s18);
+			st.select(s19);
+			cit.select(s20);
+			blood.select(s21);
+			padd_t10.setText(s21);
+			f_name_t11.setText(s22);
+			m_name_t12.setText(s23);
+			
+		}
+		
+		if(e.getSource()==b34){
+			System.exit(0);
+		}
+	
+	
+	
+}
+	
+	
+	
+
+	
+	public static void main(String args[]){
+		miniproject ob = new miniproject();
+		
+	}
+	
+	
+	
+}
