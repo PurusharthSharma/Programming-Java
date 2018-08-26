@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import static java.lang.System.*;
+import java.sql.*;
+
+public class jdbcstu {
+	public static void main(String args[]) throws Exception{
+		
+		int srollno,sphno;
+		String ssname;
+		
+		Scanner sys = new Scanner (System.in);
+		
+		System.out.print("enter The Rollno of the student  :");
+		srollno = sys.nextInt();
+		
+		System.out.println("Enter The name ;");
+		ssname = sys.next();
+		
+		System.out.println("Enyter The phone no ;");
+		sphno = sys.nextInt();
+		
+		String SQL = "Insert into studrec values("+srollno+",'"+ssname+"',"+sphno+")";
+		System.out.println(SQL);
+		
+		Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+		Connection cn = DriverManager.getConnection("Jdbc:Odbc:mydsn");
+		Statement st = cn.createStatement();
+		st.executeUpdate(SQL);
+		cn.close();
+	}
+
+}
