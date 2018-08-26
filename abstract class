@@ -1,0 +1,24 @@
+
+abstract class A{
+		abstract void callme();
+		
+		void callme1(){
+			System.out.println("This Is A Concreate Method ");
+		}
+}
+
+class B extends A{
+	void callme(){
+		System.out.println("B's implementation of callme.");
+	}
+}
+
+class abstractclass{
+	public static void mainm(String args[]){
+		B ob=new B();
+		
+		ob.callme();
+		ob.callme1();
+	}
+	
+}
