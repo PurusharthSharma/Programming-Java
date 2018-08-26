@@ -1,0 +1,40 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class mproject implements ActionListener{
+
+	JFrame f1;
+	Panel p1;
+	JButton b3 ;
+	
+	mproject(){
+		
+		f1=new JFrame();
+		p1=new Panel();
+		f1.setLayout (null);
+		f1.setSize(500,250);
+		f1.setVisible(true);
+		JLabel flu=new JLabel("Your Form is Submitted.");
+		Font head = new Font("Arial",Font .BOLD,20);		//	HEADING	...
+		flu.setFont(head);
+		b3= new JButton("OK");
+		b3.addActionListener(this);
+		
+		flu.setBounds(140,40,350,30);
+		b3.setBounds(200,100,90,40);
+		f1.add(flu);
+		f1.add(b3);
+		
+	}
+	
+	public void actionPerformed(ActionEvent ee){
+		if(ee.getSource()==b3){
+			f1.setVisible(false);
+		}
+	}
+	
+	public static void main(String args[]){
+		mproject ob1=new mproject();
+	}
+}
