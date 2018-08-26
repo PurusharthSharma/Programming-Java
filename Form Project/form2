@@ -1,0 +1,164 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class m12project implements ActionListener{
+	
+	
+	JFrame f2;
+	Panel p2;
+	JButton b21,b22,b23,b24;
+	
+	m12project(){
+		
+		p2=new Panel();
+		
+		f2=new JFrame("");
+		f2.setSize(1920,1080);
+		f2.setVisible(true);
+		f2.setLayout(null);
+		
+		 Font fh1 = new Font("Arial",Font.ITALIC,34);				 
+		 Font fh2 = new Font("Arial",Font.ITALIC,28);
+		 Font labels = new Font("Arial",Font.BOLD,24);
+		 Font label = new Font("Serif",Font.BOLD,20);
+		
+		JLabel head1=new JLabel("Dashboard");
+		head1.setFont(fh1);
+		
+		JLabel head2=new JLabel("Time Table For Student of 2017-18");
+		head2.setFont(fh2);
+		
+		JLabel process=new JLabel("Process");
+		process.setFont(labels);
+		JLabel p_1=new JLabel("Fill Examination Form");
+		p_1.setFont(label);
+		JLabel p_2=new JLabel("Generate Passcode");
+		p_2.setFont(label);
+		JLabel p_3=new JLabel("Print Exam Form");
+		p_3.setFont(label);
+		JLabel p_4=new JLabel("Exam Fee Payment");
+		p_4.setFont(label);
+		
+		JLabel des=new JLabel("Description");
+		des.setFont(labels);
+		JLabel d_1=new JLabel("Fill exam Form");
+		d_1.setFont(label);
+		JLabel d_2=new JLabel("Generate Passcode");
+		d_2.setFont(label);
+		JLabel d_3=new JLabel("Print Exam Form");
+		d_3.setFont(label);
+		JLabel d_4=new JLabel("Exam Fee Payment");
+		d_4.setFont(label);
+		
+		JLabel s_d=new JLabel("Start Date");
+		s_d.setFont(labels);
+		JLabel s_d1=new JLabel("13-Oct-2017 00:00:00");
+		s_d1.setFont(label);
+		JLabel s_d2=new JLabel("12-Oct-2017 00:00:00");
+		s_d2.setFont(label);
+		JLabel s_d3=new JLabel("10-Oct-2017 00:00:00");
+		s_d3.setFont(label);
+		JLabel s_d4=new JLabel("27-Oct-2017 00:00:00");
+		s_d4.setFont(label);
+		
+		JLabel e_d=new JLabel("End Date");
+		e_d.setFont(labels);
+		JLabel e_d1=new JLabel("31-Oct-2017 00:00:00");		
+		e_d1.setFont(label);
+		JLabel e_d2=new JLabel("01-Nov-2017 00:00:00");
+		e_d2.setFont(label);
+		JLabel e_d3=new JLabel("01-Nov-2017 00:00:00");
+		e_d3.setFont(label);
+		JLabel e_d4=new JLabel("01-Nov-2017 00:00:00");
+		e_d4.setFont(label);
+		
+		JLabel act=new JLabel("Action");
+		act.setFont(labels);
+		b21=new JButton("  Go  ");
+		b21.addActionListener(this);
+		b22=new JButton("  Go  ");
+		b23=new JButton("  Go  ");
+		b24=new JButton("  Go  ");
+		
+		f2.add(head1);
+		f2.add(head2);
+		f2.add(process);
+		f2.add(p_1);		
+		f2.add(p_2);
+		f2.add(p_3);
+		f2.add(p_4);
+		f2.add(des);		
+		f2.add(d_1);
+		f2.add(d_2);
+		f2.add(d_3);
+		f2.add(d_4);
+		f2.add(s_d);		
+		f2.add(s_d1);		
+		f2.add(s_d2);
+		f2.add(s_d3);
+		f2.add(s_d4);
+		f2.add(e_d);
+		f2.add(e_d1);
+		f2.add(e_d2);
+		f2.add(e_d3);
+		f2.add(e_d4);
+		f2.add(act);
+		f2.add(b21);
+		f2.add(b22);
+		f2.add(b23);
+		f2.add(b24);
+		
+		head1.setBounds(120,50,200,50);
+		head2.setBounds(160,200,500,50);
+		
+		process.setBounds(170,300,100,50);
+		p_1.setBounds(170,380,300,50);
+		p_2.setBounds(170,430,300,50);
+		p_3.setBounds(170,480,300,50);
+		p_4.setBounds(170,530,300,50);
+		
+		des.setBounds(550,300,200,50);
+		d_1.setBounds(550,380,300,50);
+		d_2.setBounds(550,430,300,50);
+		d_3.setBounds(550,480,300,50);
+		d_4.setBounds(550,530,300,50);		
+		
+		s_d.setBounds(930,300,200,50);
+		s_d1.setBounds(930,380,300,50);
+		s_d2.setBounds(930,430,300,50);
+		s_d3.setBounds(930,480,300,50);
+		s_d4.setBounds(930,530,300,50);		
+		
+		e_d.setBounds(1310,300,200,50);
+		e_d1.setBounds(1310,380,300,50);
+		e_d2.setBounds(1310,430,300,50);
+		e_d3.setBounds(1310,480,300,50);
+		e_d4.setBounds(1310,530,300,50);
+		
+		
+		
+		
+		act.setBounds(1690,300,200,50);
+		b21.setBounds(1690,380,175,50);
+		b22.setBounds(1690,430,175,50);
+		b23.setBounds(1690,480,175,50);
+		b24.setBounds(1690,530,175,50);
+		
+		
+		
+	}
+	
+	public void actionPerformed(ActionEvent e2){
+		if(e2.getSource()==b21){
+			miniproject c_ob=new miniproject();
+			f2.setVisible(false);
+		}
+	}
+	
+	
+	public static void main(String args[]){
+		m12project ob1=new m12project();
+	}
+
+}
