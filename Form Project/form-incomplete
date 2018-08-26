@@ -1,0 +1,41 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class m1projectnull implements ActionListener{
+	
+	JFrame f2;
+	Panel p2;
+	JButton b4 ;
+	
+	m1projectnull(){
+		
+		f2=new JFrame();
+		p2=new Panel();
+		f2.setLayout (null);
+		f2.setSize(500,250);
+		f2.setVisible(true);
+		JLabel flu=new JLabel("Please Fill The Details First....!!!!");
+		Font head = new Font("Arial",Font .BOLD,20);		//	HEADING	...
+		flu.setFont(head);
+		b4= new JButton("OK");
+		b4.addActionListener(this);
+		
+		flu.setBounds(100,40,350,30);
+		b4.setBounds(200,100,90,40);
+		f2.add(flu);
+		f2.add(b4);
+		
+	}
+	
+	public void actionPerformed(ActionEvent ee){
+		if(ee.getSource()==b4){
+			
+		}
+	}
+	
+	public static void main(String args[]){
+		m1projectnull ob1=new m1projectnull();
+	}
+
+}
