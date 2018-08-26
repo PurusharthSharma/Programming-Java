@@ -1,0 +1,132 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class m11project implements ActionListener{
+	
+	JFrame f1;
+	String s1,s2,s3,s4;
+	Panel p11;
+	JTextField r_t11,ad_t11, mo_t11,e_id_t11;
+	JButton b11,b12;
+	
+	m11project(){
+		
+		f1=new JFrame("Exam Form");		
+		f1.setSize(1920,1080);
+		f1.setVisible(true);
+		
+		p11=new Panel();
+		
+		f1.setLayout(null);
+		
+		JLabel head1=new JLabel("Student Profile");
+		
+		JLabel head2=new JLabel("Quick Registration Students   ");
+		
+		JLabel r_11=new JLabel("Roll No* :");
+		 r_t11 = new JTextField(30);
+		
+		JLabel ad_11=new JLabel("Adhar No* :");
+		ad_t11 = new JTextField(30);
+		
+		JLabel mo_11=new JLabel("Mobile No* :");
+		 mo_t11 = new JTextField(30);
+		
+		JLabel e_id_11=new JLabel("Email id* :");
+		e_id_t11 = new JTextField(30);
+		
+		b11=new JButton("  NEXT  ");
+		b11.addActionListener(this);
+		b12=new JButton("  Cancel  ");
+		b12.addActionListener(this);
+		
+		 Font fh1 = new Font("Arial",Font.ITALIC,34);				 
+		 Font fh2 = new Font("Arial",Font.ITALIC,28);
+		 Font labels = new Font("Serif",Font.BOLD,18);	
+		 Font fields = new Font("Arial",Font.ITALIC,24);	
+		 Font btn = new Font("Serif",Font.BOLD,20);			
+		
+		head1.setBounds(150,80,300,40);
+		head1.setFont(fh1);
+		
+		head2.setBounds(550,200,500,40);
+		head2.setFont(fh2);
+		
+		r_11.setBounds(550,300,200,50);
+		r_11.setFont(labels);
+		r_11.setForeground(Color.RED);
+		r_t11.setBounds(550,350,300,40);
+		r_t11.setFont(fields);
+		
+		ad_11.setBounds(1050,300,200,50);
+		ad_11.setFont(labels);
+		ad_11.setForeground(Color.RED);
+		ad_t11.setBounds(1050,350,300,40);
+		ad_t11.setFont(fields);
+		
+		mo_11.setBounds(550,450,200,50);
+		mo_11.setFont(labels);
+		mo_11.setForeground(Color.RED);
+		mo_t11.setBounds(550,500,300,40);
+		mo_t11.setFont(fields);
+		
+		e_id_11.setBounds(1050,450,300,50);
+		e_id_11.setFont(labels);
+		e_id_11.setForeground(Color.RED);
+		e_id_t11.setBounds(1050,500,300,40);
+		e_id_t11.setFont(fields);
+		
+		b11.setBounds(800,700,280,40);
+		b11.setFont(btn);
+		b12.setBounds(1200,700,150,40);		
+		b12.setFont(btn);
+		
+		f1.add(head1);
+		f1.add(head2);
+		f1.add(r_11);
+		f1.add(r_t11);
+		f1.add(ad_11);
+		f1.add(ad_t11);
+		f1.add(mo_11);
+		f1.add(mo_t11);
+		f1.add(e_id_11);
+		f1.add(e_id_t11);
+		f1.add(b11);
+		f1.add(b12);
+	}
+	
+	public void actionPerformed(ActionEvent e1){
+		
+		if(e1.getSource()==b11){
+			s1=r_t11.getText();
+			s2=ad_t11.getText();
+			s3=mo_t11.getText();
+			s4=e_id_t11.getText();
+		
+			if(s1.length()==0 || s2.length()==0 || s3.length()==0 || s4.length()==0 ){
+				JOptionPane.showInputDialog(  this, "Please Fill All Details Properly...!!!");
+				return;
+			}
+			
+			if(s1.length()!=0 ){
+				m12project c_ob=new m12project();
+				f1.setVisible(false);
+			}
+			
+			
+			
+				
+		}
+		
+		if(e1.getSource()==b12){
+			System.exit(0);
+		}
+		
+	}
+	
+	public static void main(String args[]){
+		m11project ob1=new m11project();
+	}
+
+}
